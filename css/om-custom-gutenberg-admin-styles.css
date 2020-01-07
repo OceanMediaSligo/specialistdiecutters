@@ -1,0 +1,163 @@
+/* Fix the editor top bar to the bottom of the page */
+@media (min-width: 600px) {
+
+	.edit-post-header {
+		top: auto;
+		bottom: 0;
+		z-index: 100;
+		border-bottom: none;
+		border-top: 1px solid #e2e4e7;
+	}
+	.edit-post-layout {
+		padding-top: 0;
+		padding-bottom: 56px;
+	}
+	.edit-post-sidebar {
+		top: 46px;
+		margin-bottom: 56px;
+	}
+
+}
+
+@media (min-width: 782px) {
+
+	.edit-post-layout {
+		padding-bottom: 0;
+	}
+	.edit-post-layout__content {
+	    top: 32px;
+	    margin-bottom: 56px;
+	    z-index: 100;
+	}
+	.edit-post-sidebar {
+		top: 32px;
+	}
+
+}
+
+/* Modify editor colour scheme and layout to make blocks stand out more */
+#editor {
+	background-color: #f3f4f5;
+}
+.block-editor-block-list__layout .block-editor-block-list__block .block-editor-block-list__block-edit:before {
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+	border-color: #ccd0d4;
+	border-left: 1px solid #ccd0d4;
+}
+.wp-block:not(.editor-post-title__block) {
+	margin-top: 70px;
+}
+.block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
+	border: 2px dashed #ccd0d4;
+	border-radius: 0;
+	padding: 16px;
+}
+
+
+/* Make Add Block button always visible above blocks */
+.block-editor-block-list__insertion-point-inserter {
+	opacity: 1;
+	display: flex;
+	justify-content: flex-end;
+}
+.block-editor-block-list__block > .block-editor-block-list__insertion-point {
+	top: -35px;
+}
+.block-editor-block-list__insertion-point-inserter .block-editor-inserter__toggle {
+	background-color: transparent;
+	color: rgba(10, 24, 41, 0.4);
+}
+
+/* Position block inserter menu in the center of the page */
+.components-popover.block-editor-inserter__popover {
+	z-index: 99999;
+}
+.block-editor-inserter__popover.components-animate__appear {
+    animation: none;
+    animation-fill-mode: none;
+}
+.block-editor-inserter__popover:before,
+.block-editor-inserter__popover:after {
+	display: none;
+}
+.block-editor-inserter__results {
+	height: auto;
+	width: calc(100% - 1px);
+}
+
+@media (min-width: 782px) {
+
+	.block-editor-inserter__popover {
+		top: 50% !important;
+		left: 50% !important;
+		transform: translate(-50%, -50%);
+	}
+	.block-editor-inserter__popover.components-popover .components-popover__content,
+.block-editor-inserter__popover.components-popover:not(.is-mobile).is-center .components-popover__content {
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+	border: 1px solid #545d66;
+	box-shadow: 0 0.3px 0.7px rgba(0, 0, 0, 0.028),
+	  0 0.7px 1.8px rgba(0, 0, 0, 0.04),
+	  0 1.4px 3.4px rgba(0, 0, 0, 0.05),
+	  0 2.5px 6px rgba(0, 0, 0, 0.06),
+	  0 4.6px 11.3px rgba(0, 0, 0, 0.072),
+	  0 11px 27px rgba(0, 0, 0, 0.1);
+	max-height: none !important;
+	height: 60vh;
+	width: 50vw;
+}
+	.block-editor-inserter__menu,
+	.block-editor-inserter__main-area,
+	.block-editor-inserter__menu.has-help-panel {
+		width: 100%;
+	}
+
+}
+
+/* Modify sidebar styles to make the panels stand out more */
+.edit-post-sidebar,
+.edit-post-sidebar .components-panel {
+	background-color: #f3f4f5;
+}
+.edit-post-sidebar .components-panel,
+.edit-post-settings-sidebar__panel-block {
+	border: none;
+}
+.edit-post-sidebar .components-panel__body:not(.edit-post-settings-sidebar__panel-block) {
+	background-color: #fff;
+}
+.edit-post-sidebar .components-panel > .components-panel__body:last-child, 
+.edit-post-sidebar .components-panel > .components-panel__header:last-child {
+	border-bottom-width: 1px;
+}
+.edit-post-sidebar .components-panel__body + .components-panel__body, 
+.edit-post-sidebar .components-panel__body + .components-panel__header, 
+.edit-post-sidebar .components-panel__header + .components-panel__body,
+.edit-post-sidebar .components-panel__header + .components-panel__header {
+	margin-top: 4px;
+}
+.edit-post-sidebar .components-panel__body.edit-post-settings-sidebar__panel-block.is-opened {
+	padding: 0;
+}
+.edit-post-sidebar .block-editor-block-card {
+	padding: 16px;
+	padding-bottom: 12px;
+}
+.edit-post-settings-sidebar__panel-block .components-panel__body {
+	margin: 4px 0 0 0;
+	border-top: 1px solid #e2e4e7;
+    border-bottom: 1px solid #e2e4e7;
+}
+.edit-post-settings-sidebar__panel-block .components-panel__body:last-child {
+	margin-bottom: 0;
+}
+.edit-post-settings-sidebar__panel-block .components-panel__body:first-child {
+	margin-top: 4px;
+}
+.components-panel__body > .components-panel__body-title:hover,
+.edit-post-last-revision__panel > .components-icon-button:not(:disabled):not([aria-disabled=true]):not(.is-default):hover {
+	background-color: #f1f1f1;
+}

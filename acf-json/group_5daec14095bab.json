@@ -1,0 +1,197 @@
+{
+    "key": "group_5daec14095bab",
+    "title": "Global Layout",
+    "fields": [
+        {
+            "key": "field_5daec1409ed15",
+            "label": "Boxed Content",
+            "name": "enable_boxed_content",
+            "type": "true_false",
+            "instructions": "Inner pages only",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "message": "Enable boxed layout",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5daec1409ed3d",
+            "label": "Body Background",
+            "name": "body_background_colour",
+            "type": "color_picker",
+            "instructions": "Boxed content only",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5daec1409ed15",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5daec1409ed62",
+            "label": "Content Background",
+            "name": "content_background_colour",
+            "type": "color_picker",
+            "instructions": "Boxed content only",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5daec1409ed15",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5daedd67de1b4",
+            "label": "Sidebar",
+            "name": "enable_sidebar",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "message": "Enable sidebar",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5daecfe961493",
+            "label": "Sidebar Order",
+            "name": "sidebar_order",
+            "type": "select",
+            "instructions": "Left or right of the content",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5daedd67de1b4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "choices": {
+                "left": "Left",
+                "right": "Right"
+            },
+            "default_value": [
+                "right"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5daed03c61494",
+            "label": "Sidebar Display",
+            "name": "sidebar_display",
+            "type": "select",
+            "instructions": "Inside or outside of the boxed content",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5daedd67de1b4",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5daec1409ed15",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "choices": {
+                "inside": "Inside",
+                "outside": "Outside"
+            },
+            "default_value": [
+                "inside"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "acfe_display_title": "Layout",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1571741761
+}
