@@ -54,6 +54,7 @@ function oceanone_scripts() {
 	wp_enqueue_style( 'oceanone-style', get_stylesheet_uri(), array(), null, 'all' );
 	wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/js/modernizr.dev.js', array(), null, true );
 	wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), null, true );
+    wp_enqueue_style( 'poppins', 'https://fonts.googleapis.com/css?family=Poppins' );
 
 	// Deregister dashicons from frontend
 	if( !current_user_can( 'update_core' ) ) {
@@ -261,4 +262,10 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
-
+acf_register_block_type(array(
+    'name'              => 'icon_heading',
+    'title'             => __('Icon Heading'),
+    'description'       => __('A custom Icon Heading block.'),
+    'render_template'   => get_template_directory() . '/blocks/icon_heading/icon_heading.php',
+    'mode' => edit,
+));

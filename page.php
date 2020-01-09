@@ -19,7 +19,7 @@ $content_background = $enable_boxed_content ? $acf_content_background : '';  ?>
 					while(have_posts()) {
 						the_post();
 
-						the_title('<h1>', '</h1>');
+						the_title('<h1 class="site-title">', '</h1>');
 
 						the_content();
 

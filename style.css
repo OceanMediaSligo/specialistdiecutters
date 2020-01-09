@@ -17,7 +17,7 @@
   }
   body {
     line-height: 1.6;
-    font-family: arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #fff;
   }
   h1,
@@ -28,6 +28,8 @@
   h6 {
     line-height: 1.2;
     margin-top: 0;
+    margin-bottom:1em;
+    color:#335c8d;
   }
   h1 {
     font-size: 2.875em;
@@ -1106,6 +1108,51 @@
     }
   }
 
-    
 
-  
+/* Inner Pages Addes Styles */
+#content,.sidebar{
+    margin-top:3em
+}
+.site-title{
+    display: none;
+}
+#menu-main-menu{
+	text-align:center;
+}
+.icon-lists li{
+  line-height: 2;
+  list-style-image: url(http://localhost/specialistdiecutters/wp-content/uploads/2020/01/tick-2.png);
+}
+.border-images-gallery img{
+  border:solid 1px #e2e2e2;
+}
+h1::after, h2::after, h3::after{
+  content: "";
+  display:block;
+  margin-top: .3em;	
+  border: solid 1px #ff7b00;
+  width: 50px;
+}
+    
+.block-editor-block-list__layout .block-editor-block-list__block .block-editor-block-list__block-edit:before{
+  z-index: -1;
+}
+
+/* Custom Heading Icon */
+.oo-icon-heading{
+  position: relative;
+  padding-left: 1em;
+  margin-bottom:0;
+}
+.oo-icon-heading::after{
+   margin-left: 1em; 
+   border:none;
+}
+.oo-icon-heading img {
+    display: inline-block;
+    height: 0.8em;
+    position: absolute;
+    margin-right: 0.2em;
+    left: 0;
+    top: 0.2em;
+}
