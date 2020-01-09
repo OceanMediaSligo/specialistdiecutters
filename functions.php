@@ -262,10 +262,23 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
+// Custom Icon Heading Block
 acf_register_block_type(array(
     'name'              => 'icon_heading',
     'title'             => __('Icon Heading'),
     'description'       => __('A custom Icon Heading block.'),
     'render_template'   => get_template_directory() . '/blocks/icon_heading/icon_heading.php',
+    'enqueue_style'     => get_template_directory_uri() . '/blocks/icon_heading/icon_heading.css',
+    'mode' => edit,
+));
+
+// Custom Contact Block
+acf_register_block_type(array(
+    'name'              => 'contact_block',
+    'title'             => __('Contact Details'),
+    'description'       => __('A custom Contact block.'),
+    'render_template'   => get_template_directory() . '/blocks/contact_block/contact_block.php',
+    'enqueue_style'     => get_template_directory_uri() . '/blocks/contact_block/contact_block.css',
+    'enqueue_script' => get_template_directory_uri() . '/blocks/contact_block/contact_block.js',
     'mode' => edit,
 ));

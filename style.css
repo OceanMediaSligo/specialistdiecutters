@@ -36,6 +36,7 @@
   }
   h2 {
     font-size: 2.25em;
+    text-transform: uppercase;
   }
   h3 {
     font-size: 1.75em;
@@ -85,7 +86,11 @@
   figure {
     margin: 0;
   }
-
+hr{
+  border:none;
+  height:1px;
+  background-color: #efe5e5;
+}
 /* = = = = = = = = = = = = = = = = = = = =
   HELPER CLASSES
 = = = = = = = = = = = = = = = = = = = = */
@@ -717,7 +722,7 @@
   input[type='button']:focus, input[type='button']:hover,
   input[type='reset']:focus, input[type='reset']:hover,
   input[type='submit']:focus, input[type='submit']:hover {
-    background-color: #555;
+    background-color: #ff7b00;
     color: #fff;
     outline: 0;
   }
@@ -1138,21 +1143,13 @@ h1::after, h2::after, h3::after{
   z-index: -1;
 }
 
-/* Custom Heading Icon */
-.oo-icon-heading{
-  position: relative;
-  padding-left: 1em;
-  margin-bottom:0;
+hr, .wp-block-separator{
+    margin-top:2em;
+    margin-bottom:2em;
 }
-.oo-icon-heading::after{
-   margin-left: 1em; 
-   border:none;
-}
-.oo-icon-heading img {
-    display: inline-block;
-    height: 0.8em;
-    position: absolute;
-    margin-right: 0.2em;
-    left: 0;
-    top: 0.2em;
-}
+
+/* Temp Disabled */
+.content {
+    max-width: unset; 
+    margin: 0 auto;
+  }
