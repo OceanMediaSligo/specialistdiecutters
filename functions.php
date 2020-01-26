@@ -54,7 +54,7 @@ function oceanone_scripts() {
 	wp_enqueue_style( 'oceanone-style', get_stylesheet_uri(), array(), null, 'all' );
 	wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/js/modernizr.dev.js', array(), null, true );
 	wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), null, true );
-	wp_enqueue_style( 'poppins', 'https://fonts.googleapis.com/css?family=Poppins' );
+	wp_enqueue_style( 'poppins', 'https://fonts.googleapis.com/css?family=Poppins:400,700,900&display=swap' );
 
 	// Deregister dashicons from frontend
 	if( !current_user_can( 'update_core' ) ) {
