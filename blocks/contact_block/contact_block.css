@@ -1,0 +1,69 @@
+.oo-contact-box ul{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left:0;
+}
+.oo-contact-box ul li{
+    list-style-type: none;
+    display: block;
+    position: relative;
+    margin-bottom: 1em;
+}
+.oo-contact-box a{
+    text-decoration: none;
+    color: inherit;
+}
+.oo-contact-box_info{
+    top: -3px;
+    left: 0;
+   padding-left:2em;  
+    position: absolute; 
+}
+
+/* Accordion */
+.oo-accordion-1 {
+  background-color: #335c8d;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border-bottom: 2px solid #fff;
+}
+.oo-accordion-1-active, .oo-accordion-1:hover {
+  background-color:#415259;
+}
+.oo-accordion-1:after {
+  content: '\002B';
+  color: #ffffff;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;   
+}
+.oo-accordion-1-active:after {
+  content: "\2212";
+}
+.oo-panel {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-out;
+    -o-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+    padding-left: 2em;
+    padding-right: 2em;
+  	background-color: #e8e8e8;
+}
+.oo-panel p:first-child {
+    padding-top: 2em;
+  	padding-bottom: 1em;		
+}
+.oo-panel p:last-child {
+    padding-bottom: 2em;
+  	background-color: #e8e8e8;
+
+}

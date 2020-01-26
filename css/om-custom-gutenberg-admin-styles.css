@@ -161,3 +161,6 @@
 .edit-post-last-revision__panel > .components-icon-button:not(:disabled):not([aria-disabled=true]):not(.is-default):hover {
 	background-color: #f1f1f1;
 }
+.block-editor-block-list__layout .block-editor-block-list__block .block-editor-block-list__block-edit:before{
+  z-index: -1 !important;
+}
