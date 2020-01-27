@@ -16,7 +16,8 @@ function oceanone_setup() {
 	register_nav_menus(
 		array(
 			'main' => 'Main Menu',
-			'footer' => 'Footer Menu'
+			'footer' => 'Footer Menu',
+			'footer-secondary' => 'Footer Second Menu'
 		)
 	);
 
@@ -242,6 +243,13 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug' => 'acf-options-options'
 	));
 
+	// Footer options page
+	acf_add_options_page(array(
+		'page_title' => 'Footer',
+		'menu_title' => 'Footer',
+		'parent_slug' => 'acf-options-options'
+	));
+
 	// Contact Info options page
 	acf_add_options_page(array(
 		'page_title' => 'Contact Info',
@@ -266,3 +274,44 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 
+// Custom Home Banner Block
+acf_register_block_type(array(
+    'name'              => 'home_banner',
+    'title'             => __('Home Banner'),
+    'description'       => __('A custom Home Banner block.'),
+    'render_template'   => get_template_directory() . '/blocks/home-banner/home-banner.php',
+    'enqueue_style'     => get_template_directory_uri() . '/blocks/home-banner//home-banner.css',
+    'mode' => edit,
+));
+
+// Custom Text Media Box Pair Block
+acf_register_block_type(array(
+    'name'              => 'text_media_box_pair',
+    'title'             => __('Text Media Box Pair Block'),
+    'description'       => __('Custom Text Media Box Pair Block.'),
+    'render_template'   => get_template_directory() . '/blocks/text-media-box-pair/text-media-box-pair.php',
+    'enqueue_style'     => get_template_directory_uri() . '/blocks/text-media-box-pair/text-media-box-pair.css',
+    'mode' => edit,
+));
+
+// Custom Page Links Block
+acf_register_block_type(array(
+    'name'              => 'page_links',
+    'title'             => __('Page Links Block'),
+    'description'       => __('Custom Page Links Block.'),
+    'render_template'   => get_template_directory() . '/blocks/page-links/page-links.php',
+    'enqueue_style'     => get_template_directory_uri() . '/blocks/page-links/page-links.css',
+    'mode' => edit,
+    'align' => 'full',
+));
+
+// Custom Text List Box Pair
+acf_register_block_type(array(
+    'name'              => 'text_list_box_pair',
+    'title'             => __('Text List Box Pair'),
+    'description'       => __('Custom ext List Box Pair.'),
+    'render_template'   => get_template_directory() . '/blocks/text-list-box-pair/text-list-box-pair.php',
+    'enqueue_style'     => get_template_directory_uri() . '/blocks/text-list-box-pair/text-list-box-pair.css',
+    'mode' => edit,
+    'align' => 'full',
+));
