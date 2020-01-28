@@ -1549,3 +1549,9 @@
     padding-left:2em;
     padding-right: 2em;    
 }
+.site-footer_social-button{
+    border-radius:1.5em;
+}
+.site-footer_social-button{
+    margin-right:.5em;
+}

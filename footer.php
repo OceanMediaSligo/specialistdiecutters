@@ -50,6 +50,12 @@
                     <div class="col-sm-6 col-md-4 col-xs-stack col-sm-stack">
                         <h4 class="site-footer_heading">Contact Us</h4>
                         <ul class="site-footer_contact">
+                        	<li class="site-footer_contact-item">
+                            	<span class="site-footer_contact-item-inner">
+                            		<span class="site-footer_contact-icon"><?php oo_icon('map-marker-alt'); ?></span>
+     								<p class="site-footer_contact-item-main"><?php echo get_field('location', 'option'); ?></p>
+     							</span>
+                            </li>
                             <li class="site-footer_contact-item">
      							<span class="site-footer_contact-item-inner">
      								<span class="site-footer_contact-icon"><?php oo_icon('phone'); ?></span>
@@ -61,13 +67,7 @@
                                 	<span class="site-footer_contact-icon"><?php oo_icon('envelope'); ?></span>
                                     <a href="mailto:<?php echo get_field ('email', 'option'); ?>" class="site-footer_contact-item-main"><?php echo get_field('email', 'option'); ?></a>
      							</span>
-                            </li>
-                            <li class="site-footer_contact-item">
-                            	<span class="site-footer_contact-item-inner">
-                            		<span class="site-footer_contact-icon"><?php oo_icon('location-arrow'); ?></span>
-     								<p class="site-footer_contact-item-main"><?php echo get_field('location', 'option'); ?></p>
-     							</span>
-                            </li>
+                            </li>                            
                         </ul>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
               		<p>&copy; Copyright <?php echo get_bloginfo('name'); echo ' ' . date('Y'); ?></p>
               	</div>
               	<div class="col-sm-6 oo-footer-1cc_bottom-right">
-             		<p>Website by <a href="http://oceanmedia.ie" target="_blank">Ocean Media</a></p>
+             		<p>Website by <a style="color:#fa7820;" href="http://oceanmedia.ie" target="_blank">Ocean Media</a></p>
               	</div>
           	</div>
       	</div>

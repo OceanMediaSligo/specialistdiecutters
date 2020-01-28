@@ -2,6 +2,7 @@
 $banner_heading = get_field('oo_homepage_banner_heading');
 $banner_bg_image = get_field('oo_homepage_banner_background_image');
 $banner_button_link = get_field('oo_homepage_banner_button_link');
+$site_logo = get_field('oo_site_header_logo', 'option');
 ?>
 
 <header class="oo-hero-header">
@@ -12,7 +13,7 @@ $banner_button_link = get_field('oo_homepage_banner_button_link');
 				<div class="oo-hero-header_logo">
 					<a href="<?php echo site_url(); ?>">
 						<h1 class="sr-only"></h1>
-						<img src="https://picsum.photos/300/100">
+						<img src="<?php echo $site_logo; ?>">
 					</a>
 				</div>
 				<nav class='oo-hero-header_navbar navbar navbar-default'>
